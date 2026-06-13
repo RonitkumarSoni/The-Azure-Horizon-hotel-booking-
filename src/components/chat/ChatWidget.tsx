@@ -99,19 +99,19 @@ export default function ChatWidget() {
             <div ref={messagesEndRef} />
           </div>
 
-          <form onSubmit={handleSend} className="p-3 bg-white/40 backdrop-blur-md border-t border-concrete/20 flex gap-2">
+          <form onSubmit={handleSend} className="p-3 bg-white/10 backdrop-blur-xl border-t border-white/20 flex gap-2">
             <input
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Type your message..."
-              className="flex-1 bg-white/60 border border-concrete/30 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-golden-amber/50 text-ink placeholder:text-ink/50 backdrop-blur-sm"
+              className="flex-1 bg-white/20 border border-white/30 rounded-full px-4 py-2 text-sm focus:outline-none focus:bg-white/30 focus:border-golden-amber/50 text-ink placeholder:text-ink/60 transition-colors backdrop-blur-md shadow-inner"
               disabled={isLoading}
             />
             <button 
               type="submit"
               disabled={isLoading || !input.trim()}
-              className="w-10 h-10 rounded-full bg-pivot-black text-golden-amber flex items-center justify-center hover:bg-ink disabled:opacity-50 transition-colors"
+              className="w-10 h-10 rounded-full bg-white/20 border border-white/30 text-golden-amber flex items-center justify-center hover:bg-white/30 disabled:opacity-50 transition-all backdrop-blur-md shadow-sm"
             >
               ↑
             </button>
